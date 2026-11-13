@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!-- impeccable-disable dark-glow: glow is client-requested (Arz + client direction, 2026-11-12): ENTER splash + black/silver premium finish -->
+<!-- impeccable-disable cream-palette: Studio Pink paper is the client's chosen brand palette from the Ajaira inspo, not a default -->
+<!-- impeccable-disable marquee: ticker is the shop's announcement bar, client-approved brand element; pauses when tab hidden and under reduced-motion -->
+<!-- impeccable-disable gradient-text: chrome gradient text is client-requested and scoped to the Black + Silver theme only -->
+<!-- impeccable-disable hard-offset-shadow: intentional neobrutalist world, hard offset shadows are the brand's depth system -->
+<html lang="en" data-theme="chrome">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="/images/ajaira-logo.png?v=1126">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-a1+X/evwaynmlLIXMpmNdtJQ829z+qGWN2IdAellbRY='; style-src 'self' 'unsafe-inline' https://api.fontshare.com https://fonts.googleapis.com; font-src 'self' https://cdn.fontshare.com https://api.fontshare.com https://fonts.gstatic.com data:; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<title>Ajaira Thrift — One piece. One owner.</title>
+<meta name="description" content="Curated vintage and thrift pieces in Dhaka. One of one, first to confirm gets it.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="/images/hero-night-v2.jpg?v=1126" fetchpriority="high">
+
+
+
+
+
+<script>try{if(sessionStorage.getItem("ajaira-entered"))document.documentElement.classList.add("no-splash")}catch(e){}</script>
+<noscript></noscript>
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/styles.css">
+<noscript><style>.splash{display:none !important}</style></noscript>
+</head>
+<body>
+<div class="splash" id="splash" role="dialog" aria-modal="true" aria-label="Ajaira Thrift entrance">
+  <img class="splash-poster" src="/media/splash-poster.jpg?v=1126" alt="" aria-hidden="true">
+  <video class="splash-video" autoplay muted loop playsinline preload="auto" poster="/media/splash-poster.jpg?v=1126" aria-hidden="true"><source src="/media/splash-storm.mp4?v=1126" type="video/mp4"></video>
+  <div class="splash-inner">
+    <div class="splash-logo"><img src="/images/ajaira-logo.png?v=1126" alt="Ajaira Thrift logo"></div>
+    <p class="splash-tag">One piece. One owner.</p>
+    <button class="splash-enter" id="splashEnter" type="button">ENTER</button>
+    <p class="splash-note">One of one · Dhaka</p>
+  </div>
+  <div class="splash-ticker" aria-hidden="true"><div class="splash-ticker-track"><span>NEW DROP EVERY WEEK ★ ONE PIECE ONLY ★ NO RESTOCK ★ FIRST TO CONFIRM GETS IT ★ </span><span>NEW DROP EVERY WEEK ★ ONE PIECE ONLY ★ NO RESTOCK ★ FIRST TO CONFIRM GETS IT ★ </span></div></div>
+</div>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track" id="tickerTrack"></div></div>
+
+<header>
+  <div class="header-in">
+    <a class="logo" href="#" aria-label="Ajaira Thrift home"><img class="logo-img logo-spin" src="/images/ajaira-logo.png?v=1126" alt="Ajaira Thrift logo"></a>
+    <nav class="main">
+      <a href="#catalogue">Catalogue</a>
+      <a href="#how">How it works</a>
+      <a href="#catalogue">New drop</a>
+    </nav>
+    <button class="bag-btn" id="bagBtn">Bag (0)</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>One piece.<br><span class="stroke">One owner.</span><br><span class="pink">Gone forever.</span></h1>
+    <p class="lede">Every piece here is one of one. We find it, clean it, measure it, shoot it and put it up. You miss it, it's gone. That's the whole game.</p>
+    <div class="hero-cta">
+      <a class="btn-solid" href="#catalogue">Shop the drop</a>
+      <a class="btn-ghost" href="#how">How booking works</a>
+    </div>
+    <div class="hero-meta">
+      <div><b>1 of 1</b>no restocks</div>
+      <div><b>24–48h</b>inside Dhaka</div>
+      <div><b>bKash · COD</b>pay your way</div>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <div class="frame"><img src="/images/hero-night-v2.jpg?v=1126" alt="Hooded figure in a night alley, featured drop mood"></div>
+    <div class="price-tag"><span class="mono">Cotton Hoodie · HOD-012</span><b>৳1,450</b></div>
+  </div>
+</section>
+
+<main class="catalogue" id="catalogue">
+  <div class="cat-head">
+    <h2>The rack</h2>
+    <span class="mono">New pieces every week · Gone means gone</span>
+  </div>
+  <div class="controls" id="chips"></div>
+  <div class="count-line" id="countLine"></div>
+  <div class="grid" id="grid"></div>
+</main>
+
+<section class="how" id="how">
+  <div class="how-in">
+    <div class="how-cell">
+      <span class="mono">Step 01</span>
+      <h3>Find your piece</h3>
+      <p>There's exactly one of everything. Check the size on the piece and throw it in your bag before someone else does.</p>
+    </div>
+    <div class="how-cell">
+      <span class="mono">Step 02</span>
+      <h3>How we reserve</h3>
+      <p>No "please keep it for me", no holds. Confirm here or on WhatsApp and it's booked under your name, off the rack for everyone else.</p>
+    </div>
+    <div class="how-cell">
+      <span class="mono">Step 03</span>
+      <h3>Delivery &amp; payment</h3>
+      <p>Inside Dhaka in a day or two, ৳60. Outside Dhaka ৳120. Cash on delivery, or bKash, Nagad, Rocket. Whatever's easy.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="awning"></div>
+  <div class="foot-in">
+    <div>
+      <a class="logo" href="#" aria-label="Ajaira Thrift home"><img class="logo-img" src="/images/ajaira-logo.png?v=1126" alt="Ajaira Thrift logo"></a>
+      <p class="mono" style="margin-top:10px">One-of-one thrift · Picked in Dhaka<br>New pieces every week</p>
+    </div>
+    <p class="mono">Concept demo storefront<br>Catalogue, bag and checkout run<br>entirely in the browser</p>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim"></div>
+
+<aside class="drawer" id="drawer" aria-label="Shopping bag">
+  <header>
+    <h3>Your bag</h3>
+    <button class="x-btn" id="drawerClose" aria-label="Close bag">✕</button>
+  </header>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="drawer-foot">
+    <div class="tot-row"><span>Subtotal</span><span id="subTotal">৳0</span></div>
+    <div class="tot-row"><span>Delivery (inside Dhaka)</span><span>৳60</span></div>
+    <div class="tot-row grand"><span>Total</span><span id="grandTotal">৳0</span></div>
+    <button class="checkout-btn" id="checkoutBtn">Checkout</button>
+    <p class="demo-note">Demo checkout · No real order is placed</p>
+  </div>
+  <div class="co-view" id="checkoutView" hidden>
+    <button class="co-back" id="coBack">← Back to bag</button>
+    <h4 class="co-h">Your details</h4>
+    <label class="co-label" for="coName">Full name</label>
+    <input class="co-input" id="coName" type="text" autocomplete="name" placeholder="Your name">
+    <p class="co-err" id="errName" hidden>Please add your name.</p>
+    <label class="co-label" for="coPhone">Phone (WhatsApp)</label>
+    <input class="co-input" id="coPhone" type="tel" inputmode="tel" autocomplete="tel" placeholder="01XXXXXXXXX">
+    <p class="co-err" id="errPhone" hidden>Enter a valid mobile number, 11 digits starting 01.</p>
+    <span class="co-label">Delivery area</span>
+    <div class="co-zones">
+      <button type="button" class="zone on" data-zone="60">Inside Dhaka<span>৳60</span></button>
+      <button type="button" class="zone" data-zone="120">Outside Dhaka<span>৳120</span></button>
+    </div>
+    <label class="co-label" for="coAddr">Full address</label>
+    <textarea class="co-input" id="coAddr" rows="3" autocomplete="street-address" placeholder="House, road, area, city"></textarea>
+    <p class="co-err" id="errAddr" hidden>Please add your full address.</p>
+    <div class="tot-row"><span>Subtotal</span><span id="coSub">৳0</span></div>
+    <div class="tot-row"><span>Delivery</span><span id="coDel">৳60</span></div>
+    <div class="tot-row grand"><span>Total</span><span id="coTotal">৳0</span></div>
+    <button class="checkout-btn" id="confirmBtn">Confirm order</button>
+    <p class="demo-note">Demo checkout · No real order is placed</p>
+  </div>
+  <div class="co-view done-view" id="doneView" hidden>
+    <div class="done-star">★</div>
+    <h4 class="co-h" id="doneTitle">Booked</h4>
+    <p class="done-ref mono" id="doneRef"></p>
+    <p class="done-copy">We hold it under your name. Send the order on WhatsApp to lock the delivery slot, or just wait for our call on the number you gave.</p>
+    <a class="wa-btn done-wa" id="doneWa" href="#" target="_blank" rel="noopener">Send order on WhatsApp</a>
+    <button class="co-back done-continue" id="doneContinue">Continue shopping</button>
+  </div>
+</aside>
+
+<div class="modal-wrap" id="modalWrap">
+  <div class="modal" id="modal"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+
+
+
+
+<script src="/app.js"></script>
+</body>
+</html>
