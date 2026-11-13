@@ -1,6 +1,3 @@
-/* Ajaira Thrift — styles.css (extracted from the single-file build, order preserved) */
-
-/* --- block: main --- */
 :root{
   --paper:#FAF5EC;
   --paper2:#F3ECDD;
@@ -32,14 +29,12 @@ input{-webkit-appearance:none;appearance:none;border-radius:0}
 body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(480px circle at var(--mx,50%) var(--my,30%),rgba(255,77,141,.13),rgba(255,77,141,0) 62%),radial-gradient(rgba(22,19,14,.13) 1.2px,transparent 1.3px);background-size:auto,22px 22px}
 .mono{font-family:'IBM Plex Mono',monospace}
 
-/* ---------- ticker ---------- */
 .ticker{background:var(--ink);color:var(--paper);overflow:hidden;padding:7px 0;border-bottom:2px solid var(--ink)}
 .ticker-track{display:flex;gap:0;width:max-content;animation:tick 30s linear infinite}
 .ticker span{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:0 26px;white-space:nowrap}
 .ticker b{color:var(--pink);font-weight:600}
 @keyframes tick{to{transform:translateX(-50%)}}
 
-/* ---------- header ---------- */
 header{position:sticky;top:0;z-index:40;background:var(--paper);border-bottom:2px solid var(--ink)}
 .header-in{max-width:1240px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .logo{text-decoration:none;color:var(--ink);display:flex;align-items:center}
@@ -55,7 +50,6 @@ nav.main a:hover::before,nav.main a:focus-visible::before{transform-origin:0% 50
 .bag-btn:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--pink)}
 .bag-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--pink)}
 
-/* ---------- hero ---------- */
 .hero{max-width:1240px;margin:0 auto;padding:40px 20px 26px;display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
 .hero h1{font-family:'Archivo Black',sans-serif;font-size:clamp(40px,5.6vw,76px);line-height:.98;letter-spacing:-.015em;text-transform:uppercase}
 .hero h1 .stroke{color:transparent;-webkit-text-stroke:2.5px var(--ink)}
@@ -78,7 +72,6 @@ nav.main a:hover::before,nav.main a:focus-visible::before{transform-origin:0% 50
 .price-tag .mono{font-size:11px;letter-spacing:.12em;text-transform:uppercase;display:block}
 .price-tag b{font-size:20px}
 
-/* ---------- catalogue ---------- */
 .catalogue{max-width:1240px;margin:0 auto;padding:26px 20px 10px}
 .cat-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:2.5px solid var(--ink);padding-top:26px}
 .cat-head h2{font-family:'Archivo Black',sans-serif;font-size:clamp(30px,4vw,46px);text-transform:uppercase;line-height:1}
@@ -114,7 +107,6 @@ nav.main a:hover::before,nav.main a:focus-visible::before{transform-origin:0% 50
 .add-btn:disabled{background:#fff;color:var(--ink);opacity:.45;cursor:not-allowed}
 .empty{grid-column:1/-1;text-align:center;padding:56px 20px;border:2px dashed var(--ink);font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.1em;text-transform:uppercase}
 
-/* ---------- how it works ---------- */
 .how{max-width:1240px;margin:44px auto 0;padding:0 20px}
 .how-in{border:2.5px solid var(--ink);background:var(--paper2);display:grid;grid-template-columns:repeat(3,1fr);box-shadow:6px 6px 0 var(--ink)}
 .how-cell{padding:24px;border-right:2px dashed rgba(22,19,14,.35)}
@@ -123,12 +115,10 @@ nav.main a:hover::before,nav.main a:focus-visible::before{transform-origin:0% 50
 .how-cell h3{font-size:19px;font-weight:900;margin:8px 0 6px;text-transform:uppercase}
 .how-cell p{font-size:14px;line-height:1.5;font-weight:500}
 
-/* ---------- footer ---------- */
 footer{margin-top:60px;border-top:2.5px solid var(--ink)}
 .foot-in{max-width:1240px;margin:0 auto;padding:30px 20px 40px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:flex-start}
 .foot-in .mono{font-size:11px;letter-spacing:.1em;text-transform:uppercase;line-height:1.9;opacity:.8}
 
-/* ---------- drawer / cart ---------- */
 .scrim{position:fixed;inset:0;background:rgba(22,19,14,.5);opacity:0;pointer-events:none;transition:opacity .2s;z-index:60}
 .scrim.open{opacity:1;pointer-events:auto}
 .drawer{position:fixed;top:0;right:0;height:100dvh;width:min(420px,92vw);background:var(--paper);border-left:2.5px solid var(--ink);z-index:61;transform:translateX(105%);visibility:hidden;transition:transform .28s cubic-bezier(.32,.72,0,1),visibility 0s linear .3s;display:flex;flex-direction:column}
@@ -155,7 +145,6 @@ footer{margin-top:60px;border-top:2.5px solid var(--ink)}
 .checkout-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
 .demo-note{margin-top:10px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;opacity:.6}
 
-/* ---------- modal ---------- */
 .modal-wrap{position:fixed;inset:0;z-index:70;display:none;place-items:center;padding:18px}
 .modal-wrap.open{display:grid}
 .modal{background:var(--paper);border:2.5px solid var(--ink);box-shadow:8px 8px 0 var(--ink);max-width:880px;width:100%;max-height:92dvh;overflow-y:auto;display:grid;grid-template-columns:1fr 1fr;position:relative}
@@ -171,7 +160,6 @@ footer{margin-top:60px;border-top:2.5px solid var(--ink)}
 .confirm-line{margin-top:16px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;background:var(--pink-soft);border:2px dashed var(--ink);padding:10px 12px}
 .modal .x-btn{position:absolute;top:12px;right:12px;z-index:2}
 
-/* ---------- toast ---------- */
 .toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,90px);background:var(--ink);color:var(--paper);border:2px solid var(--ink);box-shadow:4px 4px 0 var(--pink);padding:13px 22px;font-weight:700;font-size:14px;z-index:80;transition:transform .3s cubic-bezier(.32,.72,0,1)}
 .toast.show{transform:translate(-50%,0)}
 
@@ -186,7 +174,7 @@ footer{margin-top:60px;border-top:2.5px solid var(--ink)}
   .modal{grid-template-columns:1fr}
   .modal .mph img{border-right:none;border-bottom:2.5px solid var(--ink);min-height:260px;height:300px}
 }
-/* ---------- touch feedback ---------- */
+
 .btn-solid:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
 .btn-ghost:active{background:var(--pink-soft)}
 .chip:active{transform:translate(1px,1px);box-shadow:1px 1px 0 var(--ink)}
@@ -210,8 +198,6 @@ footer{margin-top:60px;border-top:2.5px solid var(--ink)}
 @keyframes glwave{0%,34%,88%,100%{text-shadow:0 0 12px rgba(255,255,255,.22)}6%{text-shadow:0 0 30px rgba(255,255,255,.98),0 0 70px rgba(255,255,255,.6)}}
 @media (prefers-reduced-motion:reduce){.splash-enter .gl,.hero h1 .pink .gl{animation:none}}
 
-/* --- block: restraint --- */
-/* Restraint pass: Ajaira-faithful. Photography leads, chrome steps back. */
 body::before{background:radial-gradient(480px circle at var(--mx,50%) var(--my,30%),rgba(255,77,141,.08),rgba(255,77,141,0) 62%),radial-gradient(rgba(22,19,14,.06) 1.2px,transparent 1.3px);background-size:auto,22px 22px}
 header{border-bottom:1px solid rgba(22,19,14,.14)}
 .bag-btn{border-width:1.5px;box-shadow:none}
@@ -262,8 +248,6 @@ footer{border-top:1px solid rgba(22,19,14,.14)}
   .modal .mph img{border-right:none;border-bottom:1px solid rgba(22,19,14,.14)}
 }
 
-/* --- block: night --- */
-/* Night pass: black retired. Bone type, acid accent, comic buttons. */
 body::before{background:radial-gradient(480px circle at var(--mx,50%) var(--my,30%),rgba(201,247,58,.07),rgba(201,247,58,0) 62%),radial-gradient(rgba(239,234,224,.05) 1.2px,transparent 1.3px);background-size:auto,22px 22px}
 .ticker{background:#070806;color:#EFEAE0}
 header{border-bottom-color:rgba(239,234,224,.16)}
@@ -290,7 +274,7 @@ footer{border-top-color:rgba(239,234,224,.16)}
 .modal{border-color:rgba(239,234,224,.22)}
 .modal .mph img{border-right-color:rgba(239,234,224,.16)}
 .hero-photo .frame{border-color:rgba(239,234,224,.2)}
-/* comic-style buttons: hard shadow, real press physics, star burst */
+
 .chip,.btn-ghost,.wa-btn,.size-pill{border:2px solid #EFEAE0;box-shadow:4px 4px 0 #000}
 .btn-solid,.bag-btn,.add-btn,.checkout-btn{border:2px solid #000;box-shadow:4px 4px 0 #000}
 .chip:hover,.btn-ghost:hover,.wa-btn:hover,.size-pill:hover,.btn-solid:hover,.bag-btn:hover,.add-btn:hover,.checkout-btn:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 #000}
@@ -306,8 +290,6 @@ footer{border-top-color:rgba(239,234,224,.16)}
 }
 @media (prefers-reduced-motion:reduce){.burst{display:none}}
 
-/* --- block: themes --- */
-/* Color themes: default Studio Pink. Night option is Black + Silver. */
 [data-theme="chrome"]{--paper:#060607;--paper2:#0E0E10;--ink:#F2F2F0;--pink:#C7CBD4;--pink-text:#C7CBD4;--pink-soft:#1C1C20;--card:#101012;--surf:#121214;--deep:#0B0B0C;--lin:rgba(242,242,240,.18);--glow:rgba(199,203,212,.08);--dot:rgba(242,242,240,.05);--onacc:#0A0A0B;--ticker:#000000;--tickerink:#F2F2F0;--tickeracc:#C7CBD4}
 [data-theme="cobalt"]{--paper:#F1F4F9;--paper2:#E4EAF3;--ink:#0E1A2E;--pink:#2456D6;--pink-text:#1D4FD0;--pink-soft:#D8E4FF;--card:#FFFFFF;--surf:#FFFFFF;--deep:#FFFFFF;--lin:rgba(14,26,46,.16);--glow:rgba(47,107,255,.08);--dot:rgba(14,26,46,.06);--onacc:#FFFFFF;--ticker:#0E1A2E;--tickerink:#F1F4F9;--tickeracc:#7FA6FF}
 [data-theme="mono"]{--paper:#F7F5F0;--paper2:#ECE9E2;--ink:#111111;--pink:#111111;--pink-text:#111111;--pink-soft:#E3E0D8;--card:#FFFFFF;--surf:#FFFFFF;--deep:#FFFFFF;--lin:rgba(17,17,17,.18);--glow:rgba(17,17,17,.05);--dot:rgba(17,17,17,.07);--onacc:#F7F5F0;--ticker:#111111;--tickerink:#F7F5F0;--tickeracc:#F7F5F0}
@@ -356,7 +338,7 @@ footer{border-top-color:var(--lin)}
 .tsw:active{transform:translate(2px,2px);box-shadow:1px 1px 0 #000}
 header,.search input,.modal,.cart-item,.size-pill,.wa-btn,.x-btn,.drawer-foot,.price-tag,.badge,.how-in,.ticker{transition:background-color .35s ease,color .35s ease,border-color .35s ease}
 @media (max-width:640px){.toolbar .chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}.toolbar .chips::-webkit-scrollbar{display:none}.toolbar .chip{flex:none}}
-/* Literal page backgrounds per theme: iOS Safari drops var()-driven canvas repaints on theme switch, literal values always repaint */
+
 html{background:var(--paper)}
 html[data-theme="pink"]{background:#FAF5EC} html[data-theme="pink"] body{background:#FAF5EC}
 html[data-theme="chrome"]{background:#060607} html[data-theme="chrome"] body{background:#060607}
@@ -375,7 +357,7 @@ body.paused .ticker-track{animation-play-state:paused}
   .themes{order:3;width:100%;padding-top:4px}
   .tsw{flex:1;padding:10px 6px;text-align:center}
 }
-/* Chrome heart glow: Black + Silver theme gets liquid-chrome text with a heart glow */
+
 [data-theme="chrome"] .hero h1 .pink,[data-theme="chrome"] .cat-head h2{
   background:linear-gradient(180deg,#ffffff 0%,#dfe3ea 30%,#8f96a3 49%,#f4f6f9 55%,#a7adb9 78%,#e8ebf0 100%);
   -webkit-background-clip:text;background-clip:text;
@@ -385,8 +367,6 @@ body.paused .ticker-track{animation-play-state:paused}
 [data-theme="chrome"] .logo svg{filter:drop-shadow(0 0 9px rgba(210,216,228,.45))}
 [data-theme="chrome"] .burst{color:#eef1f6;text-shadow:0 0 12px rgba(220,226,238,.85),2px 2px 0 #000}
 
-/* --- block: main --- */
-/* Premium chrome finish v2, client direction (2026-11-12): comic buttons stay, glow kept tight and metallic, never neon */
 .p-card{transition:transform .25s cubic-bezier(.32,.72,0,1),box-shadow .25s}
 .p-card:hover{transform:translateY(-4px);box-shadow:10px 12px 0 rgba(0,0,0,.85),0 26px 50px rgba(0,0,0,.60),0 0 0 1px rgba(210,216,228,.22),0 0 18px rgba(199,203,212,.10)}
 .off-tag{background:linear-gradient(120deg,#F4F6FA,#B9BFCB 55%,#E8ECF2);color:#0A0A0B;box-shadow:0 0 8px rgba(210,216,228,.22)}
@@ -410,8 +390,6 @@ body.paused .ticker-track{animation-play-state:paused}
   .row .add-btn{width:100%;text-align:center;padding:12px 10px}
 }
 
-/* --- block: main --- */
-/* Checkout views (2026-11-12): customer details form + booked state, inside the bag drawer */
 .co-view{padding:4px 18px 20px;overflow-y:auto}
 .co-back{background:none;border:none;color:var(--ink);opacity:.75;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;padding:10px 0;cursor:pointer}
 .co-h{font-family:'Archivo Black',sans-serif;font-size:19px;text-transform:uppercase;margin:4px 0 12px}
@@ -433,8 +411,6 @@ body.paused .ticker-track{animation-play-state:paused}
 .done-wa{display:block;margin:18px 0 6px;padding:14px;text-align:center}
 .done-continue{width:100%;text-align:center}
 
-/* --- block: main --- */
-/* Touch-parity motion (2026-11-12): phones get the same life as desktop, no hover needed */
 @keyframes risein{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 .card{animation:risein .5s cubic-bezier(.32,.72,0,1) backwards}
 .card:nth-child(4n+2){animation-delay:.05s}
@@ -446,8 +422,6 @@ body.entered .hero p.lede{animation-delay:.12s}
 .card:hover{transform:translateY(-4px);box-shadow:10px 12px 0 rgba(0,0,0,.85),0 26px 50px rgba(0,0,0,.60),0 0 0 1px rgba(210,216,228,.22),0 0 18px rgba(199,203,212,.10)}
 @media (prefers-reduced-motion:reduce){.card,body.entered .hero h1,body.entered .hero p.lede{animation:none}}
 
-/* --- block: main --- */
-/* Original Ajaira Thrift logo (from their Instagram, 2026-11-12): black knocked out with screen blend */
 .splash-logo img{width:min(52vw,190px);height:auto;animation:logoflip 6s ease-in-out infinite;filter:drop-shadow(0 6px 24px rgba(0,0,0,.45))}
 .logo-img{height:50px;width:50px;object-fit:contain;display:block}
 .logo-spin{animation:logosway 2.4s ease-in-out infinite alternate;transform-origin:50% 50%;will-change:transform}

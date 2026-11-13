@@ -1,6 +1,3 @@
-/* Ajaira Thrift — app.js (extracted from the single-file build, order preserved) */
-
-/* theme lock cleanup (was a pre-paint inline script; theme is now set on <html>) */
 try{localStorage.removeItem("ajaira-theme")}catch(e){}
 
 window.__ajairaBooted = true;
@@ -21,7 +18,7 @@ const PRODUCTS = [
  {slug:"old-money-shirt-fit",name:"Old Money Shirt — Customer Fit",sku:"AJ-014",price:750,was:0,cat:"Shirts",stock:1,sizes:["M"],desc:"As worn by a customer. One piece only, DM on WhatsApp to book.",img:"/images/real-14.jpg?v=1126"}
 ];
 const CATS = ["All","Jackets","Leather","Track","Shirts"];
-/* Thrift spec sheet: measurements in inches and an honest condition note, like a real listing */
+
 const SPECS = {
   "dhaka-cotton-panjabi":{meas:"Chest 41in · Length 28in · Sleeve 24in",cond:"9/10 · No visible flaws"},
   "premium-polo-shirt":{meas:"Chest 40in · Length 27in",cond:"9/10 · Collar holds its shape"},
@@ -46,7 +43,6 @@ let DELIVERY = 60;
 const tickerMsgs = ["New drop every week","One piece only, no restock","Dhaka delivery in 24–48h · ৳60","First to confirm gets it","bKash · Nagad · Rocket · Cash on delivery","Missed it? It's gone"];
 document.getElementById("tickerTrack").innerHTML = (tickerMsgs.concat(tickerMsgs)).map(m=>`<span>${m} <b>★</b></span>`).join("");
 
-/* Image safety net: if a photo fails once (flaky webview), retry it once fresh */
 document.addEventListener("error", e=>{
   const t = e.target;
   if(t && t.tagName === "IMG" && !t.dataset.retried){
@@ -55,7 +51,6 @@ document.addEventListener("error", e=>{
   }
 }, true);
 
-/* Color theme switcher */
 const THEME_NAMES = {pink:"Studio Pink", chrome:"Black + Silver", cobalt:"Cobalt", mono:"Mono Ink"};
 document.documentElement.dataset.theme="chrome";
 document.addEventListener("visibilitychange", ()=>document.body.classList.toggle("paused", document.hidden));
@@ -122,8 +117,6 @@ function burst(el){
 }
 function addToCart(slug, srcEl){
   const p = PRODUCTS.find(x=>x.slug===slug);
-  /* Stock invariant enforced in the logic, not just the UI: a booked
-     one-piece item can never enter the bag, whatever path calls this. */
   if(!p || p.stock===0){ toast("That one's already booked"); return; }
   const cur = cart.get(slug) || {p, qty:0, size:p.sizes[0]};
   cur.qty = Math.min(cur.qty + 1, Math.max(p.stock,1));
@@ -274,7 +267,6 @@ function toast(msg){
   t.textContent = msg; t.classList.add("show");
   clearTimeout(toastTimer); toastTimer = setTimeout(()=>t.classList.remove("show"), 2400);
 }
-/* Interactive background: glow follows finger/cursor, hero pieces drift on scroll */
 (function(){
   const root = document.documentElement;
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
