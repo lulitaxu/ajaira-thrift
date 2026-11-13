@@ -42,6 +42,22 @@ Netlify/Cloudflare Pages; the same CSP also ships as a `<meta>` tag in
   confirmations render through `textContent`, and the WhatsApp order
   message is built with `encodeURIComponent`.
 
+## Wiring it to a backend
+
+This is the frontend deliverable, built to be customized and connected:
+
+- **Catalogue data** lives in the `PRODUCTS` array at the top of
+  `app.js` (name, sku, price, compare-at, category, sizes, stock,
+  specs, image). The grid, filters, search and product modal all read
+  from it, so swapping the array for API data wires the whole page.
+- **Bag state** is the `cart` Map in `app.js`. `addToCart()` enforces
+  the one-piece stock rule; the bag drawer and totals read from it.
+- **Checkout** is the confirm handler in `app.js`: it validates the
+  form, builds the order and opens the WhatsApp order link. Replace
+  that last step with the backend's checkout call when connecting.
+- **Theme** is locked to black + silver with `data-theme="chrome"`
+  on the `<html>` element.
+
 ## Production note
 
 This build is the storefront. When it takes real orders, stock
